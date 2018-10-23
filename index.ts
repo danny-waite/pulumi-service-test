@@ -24,7 +24,7 @@ let disco = new aws.servicediscovery.PrivateDnsNamespace("test", {
     description: "test",
     name: "test",
     vpc: originalNetwork.vpcId
-});
+}, { dependsOn: [service] });
 
 export const svc = service;
 export const vpcId = originalNetwork.vpcId;

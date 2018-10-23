@@ -1,0 +1,11 @@
+{
+    "name": "pulumi-service-test",
+    "devDependencies": {
+        "@types/node": "latest"
+    },
+    "dependencies": {
+        "@pulumi/aws": "latest",
+        "@pulumi/cloud-aws": "^0.16.0",
+        "@pulumi/pulumi": "latest"
+    }
+}

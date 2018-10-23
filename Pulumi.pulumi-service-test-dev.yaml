@@ -1,0 +1,4 @@
+config:
+  aws:region: eu-west-1
+  cloud-aws:useFargate: "true"
+  cloud-aws:usePrivateNetwork: "true"

@@ -17,14 +17,14 @@ let service = new cloud.Service("testService", {
     replicas: 1
 });
 
-const network = (service.cluster as any).network;
-const originalNetwork: awsinfra.Network = network;
+
+const network = cloud.getOrCreateNetwork()
 
 let disco = new aws.servicediscovery.PrivateDnsNamespace("test", {
     description: "test",
     name: "test",
-    vpc: originalNetwork.vpcId
+    vpc: network.vpcId
 }, { dependsOn: [service] });
 
 export const svc = service;
-export const vpcId = originalNetwork.vpcId;
+export const vpcId = network.vpcId;
